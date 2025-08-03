@@ -1,5 +1,5 @@
 valid_words = {}
-
+participants_data = {}
 def normalize_word(word: str) -> str :
    return "".split(word.split())
 
@@ -23,3 +23,7 @@ def ready_up():
                         valid_words[category].add(normalize)
     except:
       print('Error: esm_famil_data.csv not found.')
+
+def add_participant(participant: str, answers: dict) :
+    global participants_data
+    participants_data[participant] = answers
